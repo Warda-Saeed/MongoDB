@@ -1,0 +1,137 @@
+/* Basic Reset and Body Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Event Form Styling */
+.event-form {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.event-form input {
+    padding: 10px;
+    margin: 5px 0;
+    width: calc(100% - 20px);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.event-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.event-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Event Cards Styling */
+.event-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.event-card {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.event-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.event-card h3 {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.event-card p {
+    color: #f3f3f3;
+    margin: 5px 0;
+}
+
+.event-card .btn-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Button Styles */
+.btn {
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    flex: 1;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.btn.edit {
+    background-color: #38bdf8;
+}
+
+.btn.edit:hover {
+    background-color: #0284c7;
+}
+
+.btn.delete {
+    background-color: #f87171;
+}
+
+.btn.delete:hover {
+    background-color: #dc2626;
+}
+
+/* Alternative Colors for Cards */
+.event-card:nth-child(2n) {
+    background: linear-gradient(135deg, #42e695, #3bb2b8);
+}
+
+.event-card:nth-child(3n) {
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+}
+
+.event-card:nth-child(4n) {
+    background: linear-gradient(135deg, #9d50bb, #6e48aa);
+}
