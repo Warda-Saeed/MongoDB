@@ -99,6 +99,7 @@ function resetForm() {
     $("#add-update-btn").text("Add Event");
 }
 
+
 // Fetch events on page load
 $(document).ready(function () {
     fetchEvents();
@@ -107,4 +108,19 @@ $(document).ready(function () {
     $("#add-update-btn").click(function () {
         addEvent();
     });
+
+    $('#logoutButton').on('click', function () {
+        $.ajax({
+            url: '/logout',
+            type: 'GET',
+            success: function () {
+                window.location.href = '/login';
+            },
+            error: function (xhr, status, error) {
+                console.error('Error logging out:', error);
+            }
+        });
+    });
+
+
 });
